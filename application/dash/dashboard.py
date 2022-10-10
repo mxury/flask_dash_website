@@ -301,7 +301,6 @@ def create_dashboard(server):
                     children=dbc.Tabs(
                         [tab_station, tab_journeys],
                         id='journey-tabs',
-                        active_tab='tab-stations',
                         class_name='nav nav-tab justify-content-center',
                     )
                 ),
