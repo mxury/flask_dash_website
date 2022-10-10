@@ -5,81 +5,258 @@
 
 {% block main %}
 
-<section class="py-5 text-center container">
+<section class="py-3 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-10 col-md-10 mx-auto">
         <h1 class="fw-light">About me</h1>
         <p class="lead text-muted">
-            I'm passionate about data and machine learning.
-            After a PhD in theoretical physics I'm looking to transition into a career in data science.
+            Hi I'm Miki, and I've recently finished a Theoretical Physics PhD at University College London. My research
+            investigated fundamental theories of materials, specifically solid materials in which the collective behaviour
+            of electrons gives rise to new and exotic phases of matter, like superconductivity or anti-ferromagnetism. To
+            find out more about my PhD research please visit the <a href="/publications">Publications</a> page.
+        </p>
+        <p class="lead text-muted">
+          I'm deeply excited about data science and machine learning, due to their wide applicability and ability to
+          answer questions which are not answerable with only pen&paper. I have used a variety of different online
+          courses and textbooks to teach myself machine learning, and I have been applying that knowledge to a variet of
+          personal projects which can be found <a href="/personalprojects">here</a>.
         </p>
       </div>
     </div>
 </section>
 
-<div class="container-fluid py-5 bg-light">
-    <div class="row mb-5">
-        <div class="col">
-            <h3>Education and Work History</h3>
+
+<section class="sample-text-area bg-light" >
+    <div class="py-5 container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+            <div class="accordion accordion-flush" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Employment & Education History
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <dl class="row">
+                      <dt class="col-sm-3">
+                          PhD in Theoretical Physics
+                          <div class="text-muted">University College London</div>
+                          <div class="text-muted"><em>2018-2022</em></div>
+                      </dt>
+                      <dd class="col-sm-9">
+                          <ul class="list">
+                              <li>Utilised and developed complex mathematical methodologies,
+                                  acquiring results via analytical as well as computational (Mathematica/Python) methods,
+                                  in order to study exotic phases of correlated quantum matter
+                              </li>
+                              <li>Collaborated with international colleagues, and improved my
+                                  organisational and management skills when assisting
+                                  in the supervision of a Master’s and junior PhD students
+                              </li>
+                              <li>Presented at numerous conferences and published three papers,
+                                  for details click <a href="/publications">here</a>.
+                              </li>
+                          </ul>
+                      </dd>
+
+                      <dt class="col-sm-3">
+                          Energy Modelling Analyst
+                          <div class="text-muted">Aurora Energy Research</div>
+                          <div class="text-muted"><em>Feb - Aug 2018</em></div>
+                      </dt>
+                      <dd class="col-sm-9">
+                        <ul class="list">
+                              <li>
+                                  Developed a model that predicted electricity prices and the make-up of the GB energy landscape; with the use of
+                                  analytical tools including economic techniques, and optimisation theory, alongside computational methods (GAMS,
+                                  i.e. General Algebraic Modelling System)
+                              </li>
+                              <li>
+                                  Formulated recommendations on future trends, and conveyed insights to enhance clients’ decision-making,
+                                  through analysis of large data sets from an electricity pricing model using SQL, and Python (Pandas and Matplotlib)
+                              </li>
+                              <li>
+                                  Created an in-house web-app for managing model runs using Python and the Flask library, used Git extensively for
+                                  version control
+                              </li>
+                          </ul>
+                      </dd>
+
+                      <dt class="col-sm-3">
+                          MSci Mathematics and Physics
+                          <div class="text-muted">University of Bristol</div>
+                          <div class="text-muted"><em>2013-2017</em></div>
+                      </dt>
+                      <dd class="col-sm-9">
+                        <ul class="list">
+                              <li>
+                                  Courses in advanced Calculus, Differential Equations, Linear Algebra and Statistical Physics
+                              </li>
+                              <li>
+                                  Completed a scientific programming course in C and MATLAB
+                              </li>
+                              <li>
+                                  Final year project – amended and ran a legacy Fortran code that utilised the OpenMPI library to study electronic
+                                  spin transport in metallic films, analysed data using MATLAB
+                              </li>
+                          </ul>
+                      </dd>
+
+                      <dt class="col-sm-3">
+                          A Levels
+                          <div class="text-muted">Manchester Grammar School</div>
+                          <div class="text-muted"><em>2011-2013</em></div>
+                      </dt>
+                      <dd class="col-sm-9">
+                        <ul class="list">
+                              <li>
+                                  A Levels: Mathematics A*, Physics A, Further Mathematics A*
+                              </li>
+                              <li>
+                                  AS Levels: Economics A, Additional Further Mathematics A
+                              </li>
+                          </ul>
+                      </dd>
+
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Other activities & achievements
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <dl class="row">
+                      <dt class="col-sm-3">
+                          Transatlantic sailing crew member and Fundraising
+                          <div class="text-muted"><a href="https://www.race4rene.com/">Race4Rene</a></div>
+                          <div class="text-muted"><em>2019-2020</em></div>
+                      </dt>
+                      <dd class="col-sm-9">
+                          <ul class="list">
+                              <li>
+                                  Sailed across the Atlantic as a member of a crew of nine competing in the Atlantic Rally Crossing (ARC) race, part of
+                                  a campaign to raise awareness of mental health - third in class with a time of 16 days, 15 hours and 28 minutes
+                              </li>
+                              <li>
+                                  Raised over £50,000 for two charities –
+                                  <a href="https://www.childbereavementuk.org/">Child Bereavement UK</a> and
+                                  <a href="https://www.papyrus-uk.org/">Papyrus</a>
+                              </li>
+                              <li>
+                                  Conceived and organised a charity ball for over 100 people, raising £25,000 on the night
+                              </li>
+                              <li>
+                                  Improved my teamwork skills and perseverance while overcoming high pressure situations with crewmates,
+                                  including losing a main sail and a spinnaker 1200 miles from the finishing line
+                              </li>
+                          </ul>
+                      </dd>
+
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Hobbies & Interests
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul class="list">
+                        <li>
+                            Avid cyclist
+                        </li>
+                        <li>
+                            Electronic Music
+                        </li>
+                        <li>
+                            Golf
+                        </li>
+                        <li>
+                            Skiing
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
-  <div class="row mt-5">
-    <div class="col-lg-12">
-
-      <div class="horizontal-timeline">
-
-        <ul class="list-inline items">
-          <li class="list-inline-item items-list">
-            <div class="px-4">
-              <div class="event-date badge bg-dark">2011-2013x</div>
-              <h5 class="pt-2">Manchester Grammar School</h5>
-              <p class="text-muted">A Levels: Maths A*, Physics A, Further Maths A, Economics (AS) A, Additional Further Maths (AS) A</p>
-              <div>
-                <a href="#" class="btn btn-primary btn-sm">Read more</a>
-              </div>
-            </div>
-          </li>
-          <li class="list-inline-item items-list">
-            <div class="px-4">
-              <div class="event-date badge bg-success">5 June</div>
-              <h5 class="pt-2">Event Two</h5>
-              <p class="text-muted">Everyone realizes why a new common language one could refuse translators.
-              </p>
-              <div>
-                <a href="#" class="btn btn-primary btn-sm">Read more</a>
-              </div>
-            </div>
-          </li>
-          <li class="list-inline-item items-list">
-            <div class="px-4">
-              <div class="event-date badge bg-danger">7 June</div>
-              <h5 class="pt-2">Event Three</h5>
-              <p class="text-muted">If several languages coalesce the grammar of the resulting simple and
-                regular</p>
-              <div>
-                <a href="#" class="btn btn-primary btn-sm">Read more</a>
-              </div>
-            </div>
-          </li>
-          <li class="list-inline-item items-list">
-            <div class="px-4">
-              <div class="event-date badge bg-warning">8 June</div>
-              <h5 class="pt-2">Event Four</h5>
-              <p class="text-muted">Languages only differ in their pronunciation and their most common words.
-              </p>
-              <div>
-                <a href="#" class="btn btn-primary btn-sm">Read more</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-      </div>
-
     </div>
-  </div>
+</section>
 
-</div>
+<!--<div class="container-fluid py-5 bg-light">-->
+<!--    <div class="row mb-5">-->
+<!--        <div class="col">-->
+<!--            <h3>Education and Work History</h3>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  <div class="row mt-5">-->
+<!--    <div class="col-lg-12">-->
+
+<!--      <div class="horizontal-timeline">-->
+
+<!--        <ul class="list-inline items">-->
+<!--          <li class="list-inline-item items-list">-->
+<!--            <div class="px-4">-->
+<!--              <div class="event-date badge bg-dark">2011-2013x</div>-->
+<!--              <h5 class="pt-2">Manchester Grammar School</h5>-->
+<!--              <p class="text-muted">A Levels: Maths A*, Physics A, Further Maths A, Economics (AS) A, Additional Further Maths (AS) A</p>-->
+<!--              <div>-->
+<!--                <a href="#" class="btn btn-primary btn-sm">Read more</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="list-inline-item items-list">-->
+<!--            <div class="px-4">-->
+<!--              <div class="event-date badge bg-success">5 June</div>-->
+<!--              <h5 class="pt-2">Event Two</h5>-->
+<!--              <p class="text-muted">Everyone realizes why a new common language one could refuse translators.-->
+<!--              </p>-->
+<!--              <div>-->
+<!--                <a href="#" class="btn btn-primary btn-sm">Read more</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="list-inline-item items-list">-->
+<!--            <div class="px-4">-->
+<!--              <div class="event-date badge bg-danger">7 June</div>-->
+<!--              <h5 class="pt-2">Event Three</h5>-->
+<!--              <p class="text-muted">If several languages coalesce the grammar of the resulting simple and-->
+<!--                regular</p>-->
+<!--              <div>-->
+<!--                <a href="#" class="btn btn-primary btn-sm">Read more</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="list-inline-item items-list">-->
+<!--            <div class="px-4">-->
+<!--              <div class="event-date badge bg-warning">8 June</div>-->
+<!--              <h5 class="pt-2">Event Four</h5>-->
+<!--              <p class="text-muted">Languages only differ in their pronunciation and their most common words.-->
+<!--              </p>-->
+<!--              <div>-->
+<!--                <a href="#" class="btn btn-primary btn-sm">Read more</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--        </ul>-->
+
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
+
+<!--</div>-->
 
 
 {% endblock %}

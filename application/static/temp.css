@@ -149,3 +149,8 @@ body{
     border-left-color: var(--secondary);
     border-right-color: var(--secondary);
 }
+
+.accordion-button:not(.collapsed){
+    background-color: var(--secondary);
+    color: var(--primary);
+}
