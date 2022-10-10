@@ -41,35 +41,42 @@ def create_dashboard(server):
                           id='tab-stations',
                           children=[
                               dbc.Row(
+                                  className="d-flex justify-content-center py-3",
+                                  children=
                                   [
                                       dbc.Col(
-                                          dbc.Card(
-                                              [
-                                                  dbc.CardHeader('Info'),
-                                                  dbc.CardBody(
-                                                      html.P(
-                                                          """
-                                                          While there are over 300 Santander bike stations in London, a 
-                                                          few of them dwarf the others when it comes to how many people use
-                                                           them. In this tab we can explore the most popular start and end 
-                                                           stations. First choose the dates you would like to explore and 
-                                                           then choose the granularity of the data you want to consider. 
-                                                           Have fun!
-                                                          """
-                                                      ),
-                                                      # class_name='m-3',
-                                                  ),
-                                              ],
-                                              # class_name='m-3',
-                                          ),
-                                          class_name="col-6",
-                                      ),
-                                      dbc.Col(
+                                          className="col-8 text-center color-primary",
+                                          children=
                                           [
-                                              dbc.Row(
+                                              html.P(
+                                                  """
+                                                  While there are over 300 Santander bike stations in London, a 
+                                                  few of them dwarf the others when it comes to how many people use
+                                                   them. In this tab we can explore the most popular start and end 
+                                                   stations. First choose the dates you would like to explore and 
+                                                   then choose the granularity of the data you want to consider. 
+                                                   Have fun!
+                                                  """
+                                              )
+                                          ]
+                                      )
+                                  ]
+                              ),
+                              html.Br(),
+                              dbc.Row(
+                                  className="d-flex justify-content-evenly",
+                                  children=
+                                  [
+                                      dbc.Col(
+                                          className="col-3",
+                                          children=
+                                          [
+                                              dbc.Card(
+                                                  className="",
+                                                  children=
                                                   [
-                                                      dbc.Col(html.P('Date range to explore: '), width=4),
-                                                      dbc.Col(
+                                                      dbc.CardHeader('Date range', className="text-center"),
+                                                      dbc.CardBody(
                                                           dcc.DatePickerRange(
                                                               id='date-picker-range',
                                                               min_date_allowed=first_date,
@@ -77,21 +84,22 @@ def create_dashboard(server):
                                                               start_date=last_7days,
                                                               end_date=last_date,
                                                               minimum_nights=0,
-                                                              display_format="DD/MM/YY",
-                                                          ),
-                                                          # width=6,
-                                                      )
-                                                  ],
-                                                  class_name='m-2',
-                                              ),
-                                              dbc.Row(
-                                                  [
-                                                      dbc.Col(
-                                                          html.P(
-                                                              'Explore station data by choosing the granularity of it'),
-                                                          width=6,
+                                                              display_format="DD/MM/YY"),
+                                                          className="text-center"
                                                       ),
-                                                      dbc.Col(
+                                                  ]
+                                              ),
+                                          ]
+                                      ),
+                                      dbc.Col(
+                                          className="col-5 d-flex justify-content-center",
+                                          children=
+                                          [
+                                              dbc.Card(
+                                                  [
+                                                      dbc.CardHeader('''Explore station data by choosing the 
+                                                                      granularity of it'''),
+                                                      dbc.CardBody(
                                                           dcc.Dropdown(
                                                               ['Include all journeys',
                                                                'Filter by hour of the day',
@@ -101,17 +109,15 @@ def create_dashboard(server):
                                                               id='station-granularity-dropdown',
                                                               clearable=False,
                                                           ),
-                                                          width=6
-                                                      ),
+                                                          className="text-center",
+                                                      )
                                                   ]
-                                              )
+                                              ),
                                           ],
-                                          width=5,
-                                          # class_name='m-3',
                                       ),
-                                  ],
-                                  class_name='mt-3',
+                                  ]
                               ),
+                              html.Br(),
                               dbc.Row(
                                   [
                                       dbc.Col(dcc.Graph(id="start_graph"), width=6),
@@ -146,43 +152,83 @@ def create_dashboard(server):
                            id='journeys-trend',
                            children=[
                                dbc.Row(
+                                   className="d-flex justify-content-center p-3",
+                                   children=
                                    [
-                                       dbc.Col(html.P('Explore:'), width=1, align='end'),
                                        dbc.Col(
-                                           dcc.Dropdown(['Total Journeys', 'Weekly Time Series', 'Average over x-Days'],
-                                                        'Total Journeys',
-                                                        id='time-series-options',
-                                                        clearable=False,
-                                                        ),
-                                           align='start',
-                                           width=3,
-                                       ),
-                                   ],
-                                   class_name='p-3 justify-content-md-center',
-                               ),
-                               dbc.Row(html.Br()),
-                               dbc.Row(dbc.Col(
-                                   dcc.Input(id='x-Days-input', type='number', placeholder='Number of days',
-                                             min=1, value=2, debounce=True),
-                                   class_name='p-3 justify-content-md-center'),
-                                   id='x-Days-row',
-                               ),
-                               dbc.Row(html.Br()),
-                               dbc.Row(dbc.Col(
-                                   [
-                                       html.B(
-                                           'Use the separate calendars to be able to compare time series for different dates'),
-                                       html.P('Potentially interesting dates to consider:'),
-                                       html.Ul(
+                                           className="col-8 text-center",
+                                           children=
                                            [
-                                               html.Li("1. Start of Lockdown in the UK: 23rd of March 2020"),
-                                               html.Li(
-                                                   "2. European Championships (football): 11th June - 11th July 2021 "),
+                                               html.P(
+                                                   """In this tab we can explore larger cycling trends in London. There
+                                                   are two graphs provided allowing for comparison between different 
+                                                   dates, and a choice of granularity of which the data is averaged. 
+                                                   Have fun!"""
+                                               )
+                                           ]
+                                       )
+                                   ]
+                               ),
+                               dbc.Row(
+                                   className="p-3 d-flex justify-content-md-center",
+                                   children=
+                                   [
+                                       dbc.Col(
+                                           className="col-3",
+                                           children=
+                                           [
+                                               dbc.Card(
+                                                   className="",
+                                                   children=
+                                                   [
+                                                       dbc.CardHeader('Explore', className="text-center"),
+                                                       dbc.CardBody(
+                                                           className="text-center",
+                                                           children=
+                                                           [
+                                                               dcc.Dropdown(['Total Journeys', 'Weekly Time Series',
+                                                                             'Average over x-Days'],
+                                                                            'Total Journeys',
+                                                                            id='time-series-options',
+                                                                            clearable=False,
+                                                                            ),
+                                                           ]
+                                                       )
+                                                   ]
+                                               ),
                                            ]
                                        ),
                                    ],
-                                   class_name='justify-content-md-center',
                                ),
+                               dbc.Row(html.Br()),
+                               dbc.Row(
+                                   className="d-flex justify-content-center",
+                                   id='x-Days-row',
+                                   children=
+                                   [
+                                       dbc.Col(
+                                           className="col-2 text-right",
+                                           id='x-Days-col1',
+                                           children=
+                                           [
+                                               html.P('For a weekly frequency type in "7" etc.')
+                                           ]
+                                       ),
+                                       dbc.Col(
+                                           className="col-2",
+                                           id='x-Days-col2',
+                                           children=
+                                           [
+                                               dcc.Input(
+                                                   id='x-Days-input',
+                                                   type='number',
+                                                   placeholder='Number of days',
+                                                   min=1, value=2,
+                                                   debounce=True,
+                                               ),
+                                           ]
+                                       ),
+                                   ],
                                ),
                                dbc.Row(
                                    [
@@ -208,10 +254,6 @@ def create_dashboard(server):
                                            [
                                                dbc.Row(
                                                    [
-                                                       dbc.Col(
-                                                           html.P('Select date:'),
-                                                           width='auto',
-                                                       ),
                                                        dbc.Col(
                                                            dcc.DatePickerRange(
                                                                id='date-picker-time-series2',
@@ -244,7 +286,7 @@ def create_dashboard(server):
                                      children=dbc.Col(class_name="col-lg-8 col-md-8 mx-auto", children=[
                                          html.H1('Visualising Boris Bike Journeys', className="fw-light"),
                                          html.P(className="text-muted", children=
-                                                    """Santander (Boris) bikes are a major part of the Transport for 
+                                         """Santander (Boris) bikes are a major part of the Transport for 
                                                        London network. This dashboard made with Dash and 
                                                        dash-bootstrap-components provides a visualisation of the larger
                                                        trends in journeys across time and stations.  
@@ -368,14 +410,15 @@ def init_callbacks(dash_app):
             return create_journey_maps(df_start, df_end)
 
     @dash_app.callback(
-        Output('x-Days-row', 'style'),
+        Output('x-Days-col1', 'style'),
+        Output('x-Days-col2', 'style'),
         Input('time-series-options', 'value')
     )
     def toggle_xdays_input(option):
         if option == 'Average over x-Days':
-            return {'display': 'block'}
+            return {'display': 'block'}, {'display': 'block'}
         else:
-            return {'display': 'none'}
+            return {'display': 'none'}, {'display': 'none'},
 
     def render_time_series_results(option, start_date, end_date, days):
         if start_date == end_date:

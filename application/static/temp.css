@@ -115,3 +115,37 @@ body{
     border-color: var(--primary);
     color: var(--primary);
 }
+
+.card {
+    background-color: var(--secondary);
+    border-color: var(--primary);
+}
+
+.card-header {
+    background-color: var(--secondary);
+    border-color: var(--primary);
+}
+
+.nav-tabs {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.nav-tabs .nav-link:hover{
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border-top-color: var(--primary);
+    border-left-color: var(--primary);
+    border-right-color: var(--primary);
+    border-bottom-color: #fff;
+}
+
+.nav-tabs .nav-link{
+    color: var(--primary);
+    border-top-color: var(--secondary);
+    border-left-color: var(--secondary);
+    border-right-color: var(--secondary);
+}
