@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block title %}
+    About me
+{% endblock %}
+
+{% block main %}
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-10 col-md-10 mx-auto">
+        <h1 class="fw-light">About me</h1>
+        <p class="lead text-muted">
+            I'm passionate about data and machine learning.
+            After a PhD in theoretical physics I'm looking to transition into a career in data science.
+        </p>
+      </div>
+    </div>
+</section>
+
+<div class="container-fluid py-5 bg-light">
+    <div class="row mb-5">
+        <div class="col">
+            <h3>Education and Work History</h3>
+        </div>
+    </div>
+  <div class="row mt-5">
+    <div class="col-lg-12">
+
+      <div class="horizontal-timeline">
+
+        <ul class="list-inline items">
+          <li class="list-inline-item items-list">
+            <div class="px-4">
+              <div class="event-date badge bg-dark">2011-2013x</div>
+              <h5 class="pt-2">Manchester Grammar School</h5>
+              <p class="text-muted">A Levels: Maths A*, Physics A, Further Maths A, Economics (AS) A, Additional Further Maths (AS) A</p>
+              <div>
+                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item items-list">
+            <div class="px-4">
+              <div class="event-date badge bg-success">5 June</div>
+              <h5 class="pt-2">Event Two</h5>
+              <p class="text-muted">Everyone realizes why a new common language one could refuse translators.
+              </p>
+              <div>
+                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item items-list">
+            <div class="px-4">
+              <div class="event-date badge bg-danger">7 June</div>
+              <h5 class="pt-2">Event Three</h5>
+              <p class="text-muted">If several languages coalesce the grammar of the resulting simple and
+                regular</p>
+              <div>
+                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item items-list">
+            <div class="px-4">
+              <div class="event-date badge bg-warning">8 June</div>
+              <h5 class="pt-2">Event Four</h5>
+              <p class="text-muted">Languages only differ in their pronunciation and their most common words.
+              </p>
+              <div>
+                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

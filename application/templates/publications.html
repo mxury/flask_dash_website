@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block title %}
+    Publications
+{% endblock %}
+
+{% block main %}
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-10 col-md-10 mx-auto">
+        <h1 class="fw-light">PhD Research & Publications</h1>
+        <p class="text-muted">
+            Technological advances are closely interlinked with our knowledge of the properties of materials and how they
+            change under a variety of external parameters, e.g. temperature. In solid materials (i.e. not liquid/gas)
+            electrons play a major role in determining the phase and characteristics like conductivity.
+        </p>
+          <p class="text-muted">
+              During my PhD my research concentrated on investigating the phase transitions of semimetals, i.e. materials
+              that are an in-between phase of electrical insulators and conductors. I constructed lattice models and included
+              a variety of interactions and from a statistical point of view considered their evolution upon increasing interaction
+              strength. The fruits of that 4-year long research can be found below in the shape of three peer-reviewed
+              papers.
+          </p>
+      </div>
+    </div>
+  </section>
+
+<section class="sample-text-area bg-light" >
+    <div class="container">
+        <div class="col-lg-10 col-md-10 col-sm-10 mx-auto pt-3 pb-3">
+            <div class="row post-preview">
+                <div class="col-6">
+                    <h4 class="post-title">
+                            Interplay of interactions and disorder at the charge density wave transition of two-dimensional Dirac semimetals
+                    </h4>
+                    <p>
+                        Using Renormalisation Group techniques we consider the effects of weak fermionic disorder on the quantum phase transition
+                        between a Dirac semimetal and a charge density wave insulator in two-spatial dimensions. It was found that the interacting
+                        fixed point is stable against weak disorder but transitions into a glassy phase in the strong-disorder region.
+                    </p>
+                    <p class="post-meta" align="right">
+                        Published on the 23rd of February 2022
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-6 d-flex justify-content-center img-fluid align-self-center">
+                            <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.105.075143" target="_blank">
+                                <img class="portfolio-photo" src="./static/disorder_MI_transition.svg" title="" style="" height="300">
+                            </a>
+                </div>
+            </div>
+            <hr>
+            <div class="row post-preview">
+                <div class="col-lg-6 col-md-6 col-xs-6 d-flex justify-content-center img-fluid align-self-center">
+                            <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.043265" target="_blank">
+                                <img class="portfolio-photo" src="./static/honeycomb_dispersion.svg" title="" style="" height="300">
+                            </a>
+                </div>
+                <div class="col-6">
+                    <h4 class="post-title">
+                            Fermionic criticality of anisotropic nodal point semimetals away from the upper critical dimension: Exact exponents to leading order in 1/N
+                    </h4>
+                    <p>
+                        We show with the use of a soft cutoff formulation of RG that it is vital to consider the effect of order parameter screening in gapless
+                        fermionic systems that are subject to strong short-ranged interactions. We then compute the exact critical exponents for the phase transition
+                        between nodal point semimetals and charge density wave insulators.
+                    </p>
+                    <p class="post-meta" align="right">
+                        Published on the 20th of November 2020
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row post-preview">
+                <div class="col-6">
+                    <h4 class="post-title">
+                            Quantum criticality of semi-Dirac fermions in 2+1 dimensions
+                    </h4>
+                    <p>
+                        Semi-Dirac fermions are quasiparticles that are found at the topological phase transition between a Dirac
+                        semimetal and a trivial band insulator, where they disperse linearly in one momentum direction and quadratically
+                        in the other. We consider the quantum phase transition between such a semi-Dirac semimetal and various gapped phases using
+                        Renormalisation Group techniques.
+                    </p>
+                    <p class="post-meta" align="right">
+                        Published on the 1st of October 2019
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-6 d-flex justify-content-center img-fluid align-self-center">
+                            <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.155101" target="_blank">
+                                <img class="portfolio-photo" src="./static/fig1.png" title="" style="" height="300">
+                            </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48.450684mm"
+   height="34.42321mm"
+   viewBox="0 0 48.450683 34.423211"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (0f2f062aeb, 2022-09-21, custom)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.8079686"
+     inkscape:cx="127.67237"
+     inkscape:cy="40.064551"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="290.62381"
+       y="473.74106"
+       width="72.227486"
+       height="54.387627"
+       id="rect1569" />
+    <rect
+       x="230.27657"
+       y="386.4838"
+       width="206.48268"
+       height="103.19404"
+       id="rect1513" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-36.675227,-103.12274)">
+    <text
+       xml:space="preserve"
+       transform="matrix(2.0901374,0,0,1.4775958,-572.80272,-602.84167)"
+       id="text1567"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.7477px;line-height:125%;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1569);display:inline;fill:#ffffff;fill-opacity:1;stroke:#0b1b0e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><tspan
+         x="290.62305"
+         y="500.05998"
+         id="tspan13614">U</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.37620998,0,0,0.40451476,-36.248688,-51.041859)"
+       id="text1511"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:61.0355px;line-height:125%;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1513);display:inline;fill:#ffffff;fill-opacity:1;stroke:#0b1b0e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><tspan
+         x="230.27734"
+         y="440.48649"
+         id="tspan13616">M</tspan></text>
+  </g>
+</svg>
