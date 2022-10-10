@@ -29,7 +29,13 @@ def create_dashboard(server):
     dash_app = Dash(server=server,
                     routes_pathname_prefix='/dash/',
                     external_stylesheets=[bootstrap_css, './application/assets/temp.css'],
-               )
+                    title='Boris Bike Journeys',
+                    )
+
+    with open('./application/templates/dash_layout.html', 'r') as fp:
+        index_layout = fp.read()
+
+    dash_app.index_string = index_layout
 
     tab_station = dbc.Tab(label='Explore journeys by station',
                           id='tab-stations',
@@ -50,13 +56,13 @@ def create_dashboard(server):
                                                            then choose the granularity of the data you want to consider. 
                                                            Have fun!
                                                           """
-                                                          ),
+                                                      ),
                                                       # class_name='m-3',
                                                   ),
                                               ],
                                               # class_name='m-3',
                                           ),
-                                          width=6,
+                                          class_name="col-6",
                                       ),
                                       dbc.Col(
                                           [
@@ -81,7 +87,8 @@ def create_dashboard(server):
                                               dbc.Row(
                                                   [
                                                       dbc.Col(
-                                                          html.P('Explore station data by choosing the granularity of it'),
+                                                          html.P(
+                                                              'Explore station data by choosing the granularity of it'),
                                                           width=6,
                                                       ),
                                                       dbc.Col(
@@ -141,14 +148,15 @@ def create_dashboard(server):
                                dbc.Row(
                                    [
                                        dbc.Col(html.P('Explore:'), width=1, align='end'),
-                                       dbc.Col(dcc.Dropdown(['Total Journeys', 'Weekly Time Series', 'Average over x-Days'],
-                                                            'Total Journeys',
-                                                            id='time-series-options',
-                                                            clearable=False,
-                                                            ),
-                                               align='start',
-                                               width=3,
-                                               ),
+                                       dbc.Col(
+                                           dcc.Dropdown(['Total Journeys', 'Weekly Time Series', 'Average over x-Days'],
+                                                        'Total Journeys',
+                                                        id='time-series-options',
+                                                        clearable=False,
+                                                        ),
+                                           align='start',
+                                           width=3,
+                                       ),
                                    ],
                                    class_name='p-3 justify-content-md-center',
                                ),
@@ -168,7 +176,8 @@ def create_dashboard(server):
                                        html.Ul(
                                            [
                                                html.Li("1. Start of Lockdown in the UK: 23rd of March 2020"),
-                                               html.Li("2. European Championships (football): 11th June - 11th July 2021 "),
+                                               html.Li(
+                                                   "2. European Championships (football): 11th June - 11th July 2021 "),
                                            ]
                                        ),
                                    ],
@@ -228,43 +237,44 @@ def create_dashboard(server):
 
     dash_app.layout = dbc.Container(
         [
-            html.Div(
-                [
-                    dbc.Row(dbc.Col(
-                        html.H1('Interactive Map of Boris Bike Journeys'),
-                        width={'offset': 3},
-                    )),
-                    # dbc.Row(dbc.Col(
-                    #     html.H4('By Miki Uryszek'),
-                    #     width={'offset': 5}
-                    # )),
-                    dbc.Row(dbc.Col(
-                        dbc.Tabs(
-                            [tab_station, tab_journeys],
-                            id='journey-tabs',
-                            active_tab='tab-stations',
-                            class_name='nav nav-tab justify-content-center',
-                        )
-                    )),
-                    # html.Div([
-                    #     html.H1('Interactive Map of Boris Bike Journeys'),
-                    #     html.H4('By Miki Uryszek'),
-                    #     dbc.Tabs(
-                    #         [tab_station, tab_journeys],
-                    #         id='journey-tabs',
-                    #         active_tab='tab-stations',
-                    #     ),
-                    # ]),
-                    # storing the journey data frame in the user's browser session to save computation time when the user changes
-                    # granularity and other further options
-                    # maybe just maybe not really needed, given it's just filtering the data
-                    dcc.Store(id='date-filter-store'),
-                    html.P('Powered by TfL Open Data.'),
-                    html.P('Contains: OS data (c) Crown copyright and database rights 2016, and Geomni UK '
-                           'Map data (c) and database rights [2019].'),
-                ],
-                style={'margin': 100},
-            )
+            html.Section(className="pt-5 text-center container",
+                         children=
+                         [
+                             dbc.Row(class_name="pt-lg-2",
+                                     children=dbc.Col(class_name="col-lg-8 col-md-8 mx-auto", children=[
+                                         html.H1('Visualising Boris Bike Journeys', className="fw-light"),
+                                         html.P(className="text-muted", children=
+                                                    """Santander (Boris) bikes are a major part of the Transport for 
+                                                       London network. This dashboard made with Dash and 
+                                                       dash-bootstrap-components provides a visualisation of the larger
+                                                       trends in journeys across time and stations.  
+                                                       """)]
+                                                      ))
+                         ]
+                         ),
+            html.Section(className="", children=
+            [
+                dbc.Row(dbc.Col(
+                    class_name="col-12",
+                    children=dbc.Tabs(
+                        [tab_station, tab_journeys],
+                        id='journey-tabs',
+                        active_tab='tab-stations',
+                        class_name='nav nav-tab justify-content-center',
+                    )
+                ),
+                    class_name="d-flex justify-content-center"
+                ),
+                # storing the journey data frame in the user's browser session to save computation time when the user changes
+                # granularity and other further options
+                # maybe just maybe not really needed, given it's just filtering the data
+                dcc.Store(id='date-filter-store'),
+                html.P('Powered by TfL Open Data.'),
+                html.P('Contains: OS data (c) Crown copyright and database rights 2016, and Geomni UK '
+                       'Map data (c) and database rights [2019].'),
+            ],
+                         style={'margin': 100},
+                         )
         ],
         fluid=True,
     )
@@ -288,7 +298,6 @@ def init_callbacks(dash_app):
             return {'display': 'block'}, {'display': 'block'}
         else:
             return {'display': 'none'}, {'display': 'none'}
-
 
     # @dash_app.callback(
     # Output('date-filter-store', 'data'),
@@ -358,7 +367,6 @@ def init_callbacks(dash_app):
 
             return create_journey_maps(df_start, df_end)
 
-
     @dash_app.callback(
         Output('x-Days-row', 'style'),
         Input('time-series-options', 'value')
@@ -368,7 +376,6 @@ def init_callbacks(dash_app):
             return {'display': 'block'}
         else:
             return {'display': 'none'}
-
 
     def render_time_series_results(option, start_date, end_date, days):
         if start_date == end_date:
@@ -396,7 +403,6 @@ def init_callbacks(dash_app):
             fig = create_line_graphs(filtered_df)
             return dcc.Graph(figure=fig)
 
-
     @dash_app.callback(
         Output('time-series-graph-1', 'children'),
         Input('time-series-options', 'value'),
@@ -407,7 +413,6 @@ def init_callbacks(dash_app):
     def time_series_graph1(option, start_date, end_date, days):
         return render_time_series_results(option, start_date, end_date, days)
 
-
     @dash_app.callback(
         Output('time-series-graph-2', 'children'),
         Input('time-series-options', 'value'),
@@ -417,7 +422,6 @@ def init_callbacks(dash_app):
     )
     def time_series_graph2(option, start_date, end_date, days):
         return render_time_series_results(option, start_date, end_date, days)
-
 
 # if __name__ == "__main__":
 #     app.run_server(debug=True)

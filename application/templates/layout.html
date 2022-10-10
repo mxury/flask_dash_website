@@ -1,34 +1,20 @@
 <!doctype html>
-    {% include "header.html" %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="./static/temp.css" rel="stylesheet">
+    <title>Mikolaj Uryszek - {% block title %}{% endblock %}</title>
+    <link rel="icon" href="./static/icon.svg" size="16x16 32x32" type="image/svg">
+
+  </head>
+
   <body class="m-3">
 <!--  Nav-Bar start-->
-    <nav class="navbar navbar-expand-lg rounded-3">
-      <div class="container-fluid">
-        <a class="navbar-brand " href="/index">Mikolaj Uryszek</a>
-        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto ">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/aboutme">About me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/personalprojects" >Personal Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/publications" >Publications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mailto:mduryszek@gmail.com" >Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include "header.html" %}
 <!-- Navbar End -->
     <main>
         {% block main %}{% endblock %}
