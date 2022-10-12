@@ -120,8 +120,14 @@ def create_dashboard(server):
                               html.Br(),
                               dbc.Row(
                                   [
-                                      dbc.Col(dcc.Graph(id="start_graph"), width=6),
-                                      dbc.Col(dcc.Graph(id='end_graph'), width=6),
+                                      dbc.Col(
+                                          width=12, lg=6,
+                                          children= dcc.Graph(id="start_graph"),
+                                      ),
+                                      dbc.Col(
+                                          width=12, lg=6,
+                                          children=dcc.Graph(id='end_graph'),
+                                      ),
                                   ]
                               ),
                               dbc.Row(
@@ -152,11 +158,11 @@ def create_dashboard(server):
                            id='journeys-trend',
                            children=[
                                dbc.Row(
-                                   className="d-flex justify-content-center p-3",
+                                   className="d-flex justify-content-center p-lg-3",
                                    children=
                                    [
                                        dbc.Col(
-                                           className="col-8 text-center",
+                                           className="col-lg-8 col-xs-12 text-center",
                                            children=
                                            [
                                                html.P(
@@ -170,7 +176,7 @@ def create_dashboard(server):
                                    ]
                                ),
                                dbc.Row(
-                                   className="p-3 d-flex justify-content-md-center",
+                                   className="p-lg-3 d-flex justify-content-md-center",
                                    children=
                                    [
                                        dbc.Col(
@@ -248,7 +254,8 @@ def create_dashboard(server):
                                                )),
                                                dbc.Row(dbc.Col(id='time-series-graph-1')),
                                            ],
-                                           width=6,
+                                           width=12,
+                                           lg=6,
                                        ),
                                        dbc.Col(
                                            [
@@ -270,7 +277,8 @@ def create_dashboard(server):
                                                ),
                                                dbc.Row(dbc.Col(id='time-series-graph-2')),
                                            ],
-                                           width=6,
+                                           width=12,
+                                           lg=6,
                                        ),
                                    ]
                                ),
